@@ -74,5 +74,5 @@ export const sdfBorederFlowConfig: PlaygroundConfig = {
 }
 
 export function SDFBorederFlowPlaygroundFrame() {
-    return <PlaygroundFrame config={config} />
+    return <PlaygroundFrame config={sdfBorederFlowConfig} />
 }

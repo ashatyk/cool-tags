@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react'
-// npm i @xenova/transformers d3-contour simplify-js
+import { useEffect, useRef, useState, useCallback } from 'react'
 import type { CSSProperties } from 'react'
 
 export type FlatPolygon = number[] // [x0,y0,x1,y1,...]

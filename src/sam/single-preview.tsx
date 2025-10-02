@@ -224,7 +224,7 @@ export function SinglePreview({ config }: { config: PlaygroundConfig }) {
             const name = f.uniformName ?? f.name
             const v = values[f.name]
             if (v == null) continue
-            if (f.kind === 'i32') u.uniforms[name] = Math.trunc(toNum(v))
+            if (f.kind === 'i32') u.uniforms[name] = Math.trunc(toNum(v)!)
             else u.uniforms[name] = v
         }
     }
@@ -264,7 +264,7 @@ export function SinglePreview({ config }: { config: PlaygroundConfig }) {
                                         step={slider?.step ?? 0.01}
                                         onChange={(e) => {
                                             const next = arr.slice()
-                                            next[i] = toNum(e.target.value)
+                                            next[i] = toNum(e.target.value)!
                                             input.onChange(next)
                                         }}
                                     />
@@ -282,7 +282,7 @@ export function SinglePreview({ config }: { config: PlaygroundConfig }) {
                                             value={val ?? 0}
                                             onChange={(e) => {
                                                 const next = arr.slice()
-                                                next[i] = toNum(e.target.value)
+                                                next[i] = toNum(e.target.value)!
                                                 input.onChange(next)
                                             }}
                                         />

@@ -1,11 +1,5 @@
-import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react'
-import type { CSSProperties } from 'react'
-import {findSegmentIdAtPoint, getCanvasPoint } from '../utils/hit-test'
+import {useEffect, useRef, useState, useCallback, useMemo} from 'react'
 
-import {Application, Assets, Geometry, Mesh, Shader, Sprite, Texture, UniformGroup} from 'pixi.js'
-import {DEFAULT_VERTEX} from "../playgrounds/domains/playground-frame/constants.ts";
-import {toNum} from "../utils";
-import {Field, Form, FormSpy} from "react-final-form";
 import {SinglePreview} from "./single-preview.tsx";
 
 export type FlatPolygon = number[] // [x0,y0,x1,y1,...]

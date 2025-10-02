@@ -248,6 +248,7 @@ export function imagedata_to_image(imagedata: ImageData) {
     return image
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function normalizeToCanvas(coords: Float32Array, canvasW = 900, canvasH = 1200) {
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity
     const out = new Float32Array(coords.length)
@@ -264,6 +265,7 @@ export function normalizeToCanvas(coords: Float32Array, canvasW = 900, canvasH =
     return { out, minX, minY, maxX, maxY }
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function packRGBA8ImageData(normalized: Float32Array) {
     const nPairs = normalized.length / 2
     const { w, h } = fitTextureWH(nPairs)
@@ -283,6 +285,7 @@ export function packRGBA8ImageData(normalized: Float32Array) {
     return { image: imagedata_to_image(imageData), w, h, count: nPairs }
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function buildTexelMapsFromContoursMap(map: ContourMap, canvasW = 900, canvasH = 1200): Record<string, SegmentTexel> {
     const out: Record<string, SegmentTexel> = {}
 
