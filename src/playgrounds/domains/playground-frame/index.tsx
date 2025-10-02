@@ -34,7 +34,7 @@ export type PlaygroundConfig = {
     canvas: { width: number; height: number }
     shader: { vertex?: string; fragment: string }
     fields: FieldDef[]
-    staticUniforms?: Record<string, { value: never; type: UniformKind }>
+    staticUniforms?: Record<string, { value: any; type: UniformKind }>
     backgroundSrc?: string // uDiffuse
     coords?: {
         json: number[] | Record<string, unknown>

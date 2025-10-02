@@ -297,13 +297,16 @@ export function SinglePreview({ config }: { config: PlaygroundConfig }) {
     }
 
     return (
-        <div style={{ display: 'flex', gap: 32, alignItems: 'center',width:'100%',paddingTop: '16px' }}>
+        <div style={{ display: 'flex', gap: 32, alignItems: 'center',width:'100%',paddingTop: '16px',marginLeft: '56px' }}>
             <div
                 style={{
                     background: '#383838',
                     border: '1px solid #222a36',
-                    minWidth: '852px',
+                    minWidth: '600px',
                     height: '1200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
                     borderRadius: 12,
                     padding: "0 24px",
                     overflowY:'auto',
